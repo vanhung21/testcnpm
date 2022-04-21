@@ -1,10 +1,11 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+//kết nối database 
 const mongoData = process.env.DATABASE_URL;
 mongoose.connect(mongoData);
 const database = mongoose.connection;
-
+// kết nối or error
 database.on('error', (error) => {
     console.log(error)
 })
