@@ -6,7 +6,7 @@ mongoose.connect(mongoData);
 const database = mongoose.connection;
 
 database.on('error', (error) => {
-    console.log(error);
+    console.log(error)
 })
 
 database.once('connected', () => {
